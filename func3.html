@@ -41,6 +41,56 @@
         // 3. write a function wich gets 2 parameters of numbers
         //    it will return te bigger number
 
+        function multiply(a = 1, b = 2) {
+            return a * b
+            //const mul = a * b
+            //return mul;            
+        }
+        const res1 = multiply(3, 9) // 27
+        const res2 = multiply(3) // 6
+        const res3 = multiply() // 2
+        const res4 = multiply(b = 12) // 12
+
+        function positive_negative(number = 0) {
+            // solution 1
+            if (number > 0) {
+                return 'positive'
+            }
+            if (number < 0) {
+                return 'negative'
+            }
+            return 'zero'
+
+            // OR -- solution 2 -- best
+            return number > 0 ? 'positive' : number < 0 ? 'negative' : 'zero' 
+
+            // OR -- solution 3 -- not so good
+            if (number > 0) {
+                return 'positive'
+            }
+            else if (number < 0 ) {
+                return 'negative'
+            }
+            else  {
+                return 'zero'
+            }
+        }
+        let res_string1 = positive_negative(8)
+        let res_string2 = positive_negative()
+        let res_string3 = positive_negative(0)
+        let res_string4 = positive_negative(-5)
+
+        function get_bigger_equal(a, b) {
+            // solution 1
+            if (a > b) {
+                return a;
+            }
+            return b;
+
+            // OR -- solution 2 -- best
+            return a > b ? a : b
+        }
+
         // call for operation
         document.write('hello')
         console.log('hello')
